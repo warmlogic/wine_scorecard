@@ -1,0 +1,67 @@
+% Matt Mollison
+% matt.mollison@gmail.com
+
+\documentclass[12pt]{article}
+\usepackage[left=0.1in,right=0in,top=0.4in,bottom=0in]{geometry}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\usepackage{booktabs}
+% \renewcommand{\familydefault}{\sfdefault}
+% \usepackage{helvet}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\newcommand{\scoretable}{%
+\specialcell{
+\begin{tabular}{lc}
+    \specialcell{\textsc{\large Bottle} \\ \textsc{\large Number}} &
+    \raisebox{-1cm}{\includegraphics[width=0.15\textwidth]{./img/wine-stain-sm.png}}
+\end{tabular}
+
+\vspace*{.25in} \\
+
+\begin{tabular}{rccccc}
+    % \toprule
+    Score: & 1 & 2 & 3  & 4 & 5 \\
+    &  &  &  &  &  \\
+    Notes: &  &  &  &  &  \\
+    &  &  &  &  &  \\ \midrule
+    &  &  &  &  &  \\ \midrule
+\end{tabular}
+\vspace*{.3in}
+}}
+
+\newcommand{\lowline}{\uline{\, \hspace{15em} \,}}
+
+\newcommand{\scorecard}{%
+\begin{tabular}{lll}
+    & \hspace{10em} & \uline{Rating Scale} \\
+    & \hspace{10em} 5: & Outstanding \\
+    & \hspace{10em} 4: & Great \\
+    & \hspace{10em} 3: & Pretty good \\
+    & \hspace{10em} 2: & Lackluster \\
+    Connoisseur: \lowline & \hspace{10em} 1: & Never again \\
+\end{tabular}
+
+\vspace*{.25in}
+
+\begin{tabular}{ccc}
+    \scoretable & \scoretable & \scoretable \\
+    \scoretable & \scoretable & \scoretable \\
+    \scoretable & \scoretable & \scoretable \\
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{empty}
+
+\scorecard
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\scorecard
+
+\end{document}
